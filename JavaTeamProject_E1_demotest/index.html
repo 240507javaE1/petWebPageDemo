@@ -1,0 +1,258 @@
+<!DOCTYPE html><html>
+<head>
+  <meta charset="utf-8">  <title>首頁 Example</title>
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="./js/jquery.3.6.3.min.js"></script> 
+  <script src="./js/bootstrap.min.js"></script>
+</head>
+<body>
+  <nav class="navbar navbar-expand-sm bg-light">
+    <div class="container-fluid">
+      <ul class="navbar-nav"><!-- Links -->
+        <li class="nav-item">
+          <a class="nav-link" href="http://127.0.0.1:5500/JavaTeamProject_E1_demotest/index.html"><h4><b>寵物服務媒合網</b></h4></a>
+        <li class="nav-item">
+          <a class="nav-link" href="http://127.0.0.1:5500/JavaTeamProject_E1_demotest/page_role1/role1.html">寵物服務預約</a>
+        <li class="nav-item">
+          <a class="nav-link" href="http://127.0.0.1:5500/JavaTeamProject_E1_demotest/page_role2/role2.html">認養動物</a>
+        <li class="nav-item">
+          <a class="nav-link" href="http://127.0.0.1:5500/JavaTeamProject_E1_demotest/page_role3/role3.html">成為小幫手</a>
+        <li class="nav-item">
+          <a class="nav-link" href="http://127.0.0.1:5500/JavaTeamProject_E1_demotest/page_role4/role4.html">刊登送養</a>
+        <li class="nav-item">
+          <a class="nav-link" href="http://127.0.0.1:5500/JavaTeamProject_E1_demotest/page_admin/admin.html">我是管理員</a>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+<!--    搜尋列區塊 目前沒有想到首頁需要這個來找啥
+        <li class="nav-item">
+          <form class="form-inline" action="/action_page.php">
+            <input class="form-control mr-sm-2" type="text" placeholder="Search">
+            <button class="btn btn-success" type="submit">Search</button>
+          </form>
+-->
+        <li class="nav-item">
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+            註冊/登入          </button>
+<!--    一個下拉選單,叫"功能列表A" 實做出來的樣子有點失敗
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">功能列表A</a>
+            <div class="dropdown-menu">
+              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">服務內容</a>
+                <div class="dropdown-menu">
+                  <h5 class="dropdown-header">寵物服務</h5>
+                  <a class="dropdown-item" href="#">到府照顧</a>
+                  <a class="dropdown-item" href="#">到府洗澡</a>
+                  <a class="dropdown-item" href="#">陪伴散步</a>
+                  <a class="dropdown-item" href="#">安親照顧</a>
+                  <h5 class="dropdown-header">其他服務</h5>
+                  <a class="dropdown-item" href="#">動物認養</a>
+                </div>
+              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">一般後台</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">會員資料管理</a>
+                  <a class="dropdown-item" href="#">服務預約訂單查詢</a>
+                  <a class="dropdown-item" href="#">認養申請狀態查詢</a>
+                </div>
+              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">服務提供者後台</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">我的服務內容修改</a>
+                  <a class="dropdown-item" href="#">我的訂單</a>
+                </div>
+              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">送養者後台</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">我的送養動物清單</a>
+                  <a class="dropdown-item" href="#">認養通知與審核</a>
+                </div>
+            </div>
+-->
+        <li class="nav-item dropdown"><!--    這是一個下拉選單, 叫"功能列表B"-->
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">功能列表B</a>
+            <div class="dropdown-menu">
+              <h4 class="dropdown-header">服務內容</h4>
+                <a class="dropdown-item" href="#">寵物服務</a>
+                  <h6 class="dropdown-header">到府照顧</h6>
+                  <h6 class="dropdown-header">到府洗澡</h6>
+                  <h6 class="dropdown-header">陪伴散步</h6>
+                  <h6 class="dropdown-header">安親照顧</h6>
+                <a class="dropdown-item" href="#">動物認養</a>
+              <h4 class="dropdown-header">一般後台</h4>
+                <a class="dropdown-item" href="#">會員資料管理</a>
+                <a class="dropdown-item" href="#">服務預約訂單查詢</a>
+                <a class="dropdown-item" href="#">認養申請狀態查詢</a>
+              <h4 class="dropdown-header">服務提供者後台</h4>
+                <a class="dropdown-item" href="#">我的服務內容修改</a>
+                <a class="dropdown-item" href="#">我的訂單通知</a>
+              <h4 class="dropdown-header">送養者後台</h4>
+                <a class="dropdown-item" href="#">我的送養動物清單</a>
+                <a class="dropdown-item" href="#">認養通知與審核</a>
+            </div>
+      </ul>
+    </div>
+  </nav>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-3">
+      <div class="card">
+        <img class="card-img-top" src="./images/img7.jpg" alt="Card image">
+        <div class="card-body">
+          <h4 class="card-title">寵物服務預約</h4>
+          <p class="card-text">Some example text.<br>
+            敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述。<br>
+            <ul><li>到府照顧<li>到府洗澡<li>陪伴散步<li>安親照顧
+          </p>
+          <a href="#" class="btn btn-primary">進入寵物服務預約</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="card">
+        <img class="card-img-top" src="./images/img8.jpg" alt="Card image">
+        <div class="card-body">
+          <h4 class="card-title">動物認養</h4>
+          <p class="card-text">Some example text.<br>
+            敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述。<br>
+          </p>
+          <a href="#" class="btn btn-primary">申請動物認養</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="card">
+        <img class="card-img-top" src="./images/img10.jpg" alt="Card image">
+        <div class="card-body">
+          <h4 class="card-title">寵物小幫手</h4>
+          <p class="card-text">Some example text.<br>
+            敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述。<br>
+          </p>
+          <a href="#" class="btn btn-primary">成為小幫手</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="card">
+        <img class="card-img-top" src="./images/img11.jpg" alt="Card image">
+        <div class="card-body">
+          <h4 class="card-title">讓渡送養</h4>
+          <p class="card-text">Some example text.<br>
+            敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述。<br>
+          </p>
+          <a href="#" class="btn btn-primary">讓渡送養登記</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-3">
+      <img src="./images/img7.jpg" class="d-block w-100" alt="banner 1" />
+    </div>
+    <div class="col-sm-9">
+      <p>寵物服務預約</p>
+      <p>The .table-hover class enables a hover state (grey background on mouse over) on table rows:<br>
+          ，敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述。
+      </p>
+      <a  class="btn btn-primary" href="#">進入寵物服務預約</a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-3">
+      <img src="./images/img8.jpg" class="d-block w-100" alt="banner 1" />
+    </div>
+    <div class="col-sm-9">
+      <p>動物認養</p>
+      <p>The .table-hover class enables a hover state (grey background on mouse over) on table rows:<br>
+          ，敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述。
+      </p>
+      <a  class="btn btn-primary" href="#">申請動物認養</a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-3">
+      <img src="./images/img10.jpg" class="d-block w-100" alt="banner 1" />
+    </div>
+    <div class="col-sm-9">
+      <p>寵物小幫手</p>
+      <p>The .table-hover class enables a hover state (grey background on mouse over) on table rows:<br>
+          ，敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述。
+      </p>
+      <a  class="btn btn-primary" href="#">成為小幫手</a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-3">
+      <img src="./images/img11.jpg" class="d-block w-100" alt="banner 1" />
+    </div>
+    <div class="col-sm-9">
+      <p>讓渡送養</p>
+      <p>The .table-hover class enables a hover state (grey background on mouse over) on table rows:<br>
+          ，敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述。
+      </p>
+      <a  class="btn btn-primary" href="#">讓渡送養登記</a>
+    </div>
+  </div>
+<!-- The Modal -->
+<div class="modal" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">註冊/登入</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <!-- Modal body -->
+      <div class="modal-body">
+        <form action="" class="was-validated">
+          <div class="form-group">
+            <label for="uname">Username:</label>
+            <input type="text" class="form-control" id="uname" placeholder="Enter username" name="uname" required>
+            <div class="valid-feedback">Valid.</div>
+            <div class="invalid-feedback">Please fill out this field.</div>
+          </div>
+          <div class="form-group">
+            <label for="pwd">Password:</label>
+            <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd" required>
+            <div class="valid-feedback">Valid.</div>
+            <div class="invalid-feedback">Please fill out this field.</div>
+          </div>
+          <div class="form-group form-check">
+            <label class="form-check-label">
+              <input class="form-check-input" type="checkbox" name="remember" required> I agree on blabla.
+              <div class="valid-feedback">Valid.</div>
+              <div class="invalid-feedback">Check this checkbox to continue.</div>
+            </label>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <a  class="btn btn-info" href="http://127.0.0.1:5500/JavaTeamProject_E1_demotest/page_admin/signup.html">轉註冊頁</a>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div><!--div Class="Container" end -->
+
+
+<nav class="navbar navbar-expand-sm bg-light">
+  <div class="container-fluid">
+    <ul class="navbar-nav"><!-- Links -->
+      <li class="nav-item">
+        <a class="nav-link" href="http://127.0.0.1:5500/JavaTeamProject_E1_demotest/index.html"><h4><b>寵物服務媒合網</b></h4></a>
+      <li class="nav-item">
+        <a class="nav-link" href="http://127.0.0.1:5500/JavaTeamProject_E1_demotest/page_role1/role1.html">寵物服務預約</a>
+      <li class="nav-item">
+        <a class="nav-link" href="http://127.0.0.1:5500/JavaTeamProject_E1_demotest/page_role2/role2.html">認養動物</a>
+      <li class="nav-item">
+        <a class="nav-link" href="http://127.0.0.1:5500/JavaTeamProject_E1_demotest/page_role3/role3.html">成為小幫手</a>
+      <li class="nav-item">
+        <a class="nav-link" href="http://127.0.0.1:5500/JavaTeamProject_E1_demotest/page_role4/role4.html">刊登送養</a>
+      <li class="nav-item">
+        <a class="nav-link" href="http://127.0.0.1:5500/JavaTeamProject_E1_demotest/page_admin/admin.html">我是管理員</a>
+    </ul>
+  </div>
+</nav>
+</body>
+</html>
